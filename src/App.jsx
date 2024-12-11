@@ -10,7 +10,7 @@ import useGeolocation from "./hooks/useGeolocation";
 export const ThemeContext = createContext();
 export default function App() {
   const { location: currentLocation, error } = useGeolocation();
-  
+
   // 字符串。最初加载时是“经度,纬度”，用户搜索之后变成location id（确保搜索天气的准确性）。在child组件中叫做 locationKey
   const [searchedLocation, setSearchedLocation] = useState(null);
   const [theme, setTheme] = useState(() => {

@@ -51,6 +51,6 @@
   }
 
   body {
-    @apply bg-primary
+    @apply bg-bg-primary;
   }
 }
