@@ -1,5 +1,4 @@
 import { useState, useEffect, createContext } from "react";
-import "./App.css";
 import Spinner from "./components/Spinner";
 import Header from "./components/Header";
 import HeroCurrentInfo from "./components/HeroCurrentInfo";
