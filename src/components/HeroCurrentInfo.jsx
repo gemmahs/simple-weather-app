@@ -82,7 +82,7 @@ export default function HeroCurrentInfo({ locationKey }) {
         </div>
       </div>
 
-      <div className="mt-1 flex justify-evenly gap-2 text-center text-lg font-medium xs:mt-3 sm:text-xl">
+      <div className="mt-1 flex flex-wrap justify-evenly gap-1 text-center text-lg font-medium sm:mt-3 sm:gap-2 sm:text-xl">
         <p>{date}</p>
         <p>{weekday}</p>
       </div>

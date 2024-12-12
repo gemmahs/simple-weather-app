@@ -53,7 +53,7 @@ export default function DailyCards({ locationKey }) {
           className="h-36 space-y-1 rounded-xl border-2 border-dark-primary p-1 text-center xs:p-3"
           key={index}
         >
-          <div className="h-1/2">
+          <div className="h-1/2 p-1 xs:p-0">
             <IconContext.Provider
               value={{ className: "m-auto w-full h-full text-dark-primary" }}
             >

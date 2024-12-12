@@ -74,7 +74,7 @@ export default function HourlyTable({ locationKey }) {
           <th className="font-medium">时间</th>
           <th className="font-medium">天气</th>
           <th className="font-medium">温度</th>
-          <th className="font-medium">相对湿度</th>
+          <th className="font-medium">湿度</th>
           <th className="font-medium">风速</th>
           <th className="font-medium">降雨</th>
         </tr>

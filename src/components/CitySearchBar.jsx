@@ -93,7 +93,7 @@ function CitySearchBar({ setLocationKey, setLocationName }) {
     <div ref={menuRef} id="search-bar" className="relative w-full max-w-60">
       <input
         type="text"
-        className="relative z-10 h-8 w-full rounded-full py-1 pl-10 pr-3 outline-0 focus:ring-2 focus:ring-dark-primary"
+        className="relative z-10 h-8 w-full rounded-full py-1 pl-10 pr-3 outline-none focus:outline-none focus:ring-2 focus:ring-dark-primary"
         placeholder="输入城市名称"
         value={searchInput}
         onChange={onInputChange}
