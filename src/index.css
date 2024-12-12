@@ -43,13 +43,9 @@
     --bg-row-2: #faefda;
     --dark-primary: #964b1c;
   }
-
-  body {
-    background-color: var(--bg-primary);
-  }
 }
 
-@layer base {
+@layer utilities {
   * {
     @apply transition-colors duration-200 ease-in-out;
   }

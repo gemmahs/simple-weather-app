@@ -18,7 +18,12 @@ export default function App() {
   });
 
   //每次Theme改变后更新localStorage
-  useEffect(() => localStorage.setItem("theme", theme), [theme]);
+  useEffect(() => {
+    theme === "warm"
+      ? document.body.classList.add("theme-warm")
+      : document.body.classList.remove("theme-warm");
+    localStorage.setItem("theme", theme);
+  }, [theme]);
 
   useEffect(() => {
     if (currentLocation && !searchedLocation) {
@@ -31,9 +36,7 @@ export default function App() {
   console.log(`当前城市信息为：${searchedLocation}`);
 
   return (
-    <div
-      className={`min-h-screen bg-bg-primary ${theme === "warm" ? "theme-warm" : ""}`}
-    >
+    <div className="min-h-screen">
       <main className="mx-auto max-w-[800px] py-4 text-basic">
         {!searchedLocation ? (
           <>
