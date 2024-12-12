@@ -25,6 +25,8 @@ export default function App() {
     localStorage.setItem("theme", theme);
   }, [theme]);
 
+  document.body.classList.add("bg-bg-primary");
+  
   useEffect(() => {
     if (currentLocation && !searchedLocation) {
       setSearchedLocation(`${currentLocation.lon},${currentLocation.lat}`);
