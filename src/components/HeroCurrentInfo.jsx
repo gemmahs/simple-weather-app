@@ -76,13 +76,13 @@ export default function HeroCurrentInfo({ locationKey }) {
           <div className="text-3xl font-bold xs:text-4xl sm:text-5xl">
             <span>{currentTemp}</span>&deg;C
           </div>
-          <div className="text-lg font-semibold sm:text-xl">
+          <div className="text-center text-lg font-semibold sm:text-xl">
             {currentWeather}
           </div>
         </div>
       </div>
 
-      <div className="mt-1 flex flex-wrap justify-evenly gap-1 text-center text-lg font-medium sm:mt-3 sm:gap-2 sm:text-xl">
+      <div className="mt-1 flex flex-wrap justify-evenly gap-x-1 text-center text-lg font-medium sm:mt-3 sm:gap-x-2 sm:text-xl">
         <p>{date}</p>
         <p>{weekday}</p>
       </div>
