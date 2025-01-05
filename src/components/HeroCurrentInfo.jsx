@@ -48,7 +48,7 @@ export default function HeroCurrentInfo({ locationKey }) {
   const formatter1 = new Intl.DateTimeFormat("zh-CN", {
     year: "numeric",
     month: "long",
-    day: "2-digit",
+    day: "numeric",
   });
   const formatter2 = new Intl.DateTimeFormat("zh-CN", {
     weekday: "long",
