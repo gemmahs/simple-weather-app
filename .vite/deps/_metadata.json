@@ -1,8 +1,79 @@
 {
-  "hash": "bb3e44d0",
+  "hash": "6cb899d6",
   "configHash": "fe338466",
-  "lockfileHash": "e3b0c442",
-  "browserHash": "38cebe27",
-  "optimized": {},
-  "chunks": {}
+  "lockfileHash": "a16c1f8a",
+  "browserHash": "cd94b692",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "54e3c650",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "a5d8651e",
+      "needsInterop": true
+    },
+    "@tanstack/react-query": {
+      "src": "../../node_modules/@tanstack/react-query/build/modern/index.js",
+      "file": "@tanstack_react-query.js",
+      "fileHash": "79404915",
+      "needsInterop": false
+    },
+    "react-spinners/FadeLoader": {
+      "src": "../../node_modules/react-spinners/FadeLoader.js",
+      "file": "react-spinners_FadeLoader.js",
+      "fileHash": "42429a9a",
+      "needsInterop": true
+    },
+    "react-icons": {
+      "src": "../../node_modules/react-icons/index.mjs",
+      "file": "react-icons.js",
+      "fileHash": "fefc8dd6",
+      "needsInterop": false
+    },
+    "react-icons/io5": {
+      "src": "../../node_modules/react-icons/io5/index.mjs",
+      "file": "react-icons_io5.js",
+      "fileHash": "1db14865",
+      "needsInterop": false
+    },
+    "react-icons/fa6": {
+      "src": "../../node_modules/react-icons/fa6/index.mjs",
+      "file": "react-icons_fa6.js",
+      "fileHash": "9ea7a9fa",
+      "needsInterop": false
+    },
+    "react-icons/io": {
+      "src": "../../node_modules/react-icons/io/index.mjs",
+      "file": "react-icons_io.js",
+      "fileHash": "79a23163",
+      "needsInterop": false
+    },
+    "react-icons/ci": {
+      "src": "../../node_modules/react-icons/ci/index.mjs",
+      "file": "react-icons_ci.js",
+      "fileHash": "b2fd181c",
+      "needsInterop": false
+    },
+    "lodash.debounce": {
+      "src": "../../node_modules/lodash.debounce/index.js",
+      "file": "lodash__debounce.js",
+      "fileHash": "8e93fb29",
+      "needsInterop": true
+    }
+  },
+  "chunks": {
+    "chunk-5MBOHFUV": {
+      "file": "chunk-5MBOHFUV.js"
+    },
+    "chunk-3EX3NYWH": {
+      "file": "chunk-3EX3NYWH.js"
+    },
+    "chunk-3O7X656O": {
+      "file": "chunk-3O7X656O.js"
+    }
+  }
 }

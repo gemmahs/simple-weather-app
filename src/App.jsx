@@ -19,14 +19,20 @@ export default function App() {
 
   //每次Theme改变后更新localStorage
   useEffect(() => {
-    theme === "warm"
-      ? document.body.classList.add("theme-warm")
-      : document.body.classList.remove("theme-warm");
+    if (theme === "warm") {
+      document.body.classList.add("theme-warm");
+      document.body.classList.remove("theme-mint");
+    } else if (theme === "mint") {
+      document.body.classList.add("theme-mint");
+      document.body.classList.remove("theme-warm");
+    } else if (theme === "cool") {
+      document.body.classList.remove("theme-warm", "theme-mint");
+    }
     localStorage.setItem("theme", theme);
   }, [theme]);
 
   document.body.classList.add("bg-bg-primary");
-  
+
   useEffect(() => {
     if (currentLocation && !searchedLocation) {
       setSearchedLocation(`${currentLocation.lon},${currentLocation.lat}`);

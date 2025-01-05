@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --text-basic: #3d3d3d;
+    --text-basic: #565656;
     --bg-primary: #c5dff3;
     --bg-row-1: #b3cfe4;
     --bg-row-2: #ccddeb;
@@ -37,11 +37,19 @@
   }
 
   .theme-warm {
-    --text-basic: #3d3d3d;
+    --text-basic: #4e4e4e;
     --bg-primary: #f1d69c;
     --bg-row-1: #f4dbb4;
     --bg-row-2: #faefda;
     --dark-primary: #964b1c;
+  }
+
+  .theme-mint {
+    --text-basic: #646464;
+    --bg-primary: #dbfaf4;
+    --bg-row-1: #cdf9f1;
+    --bg-row-2: #eefffa;
+    --dark-primary: #3b8f8b;
   }
 }
 

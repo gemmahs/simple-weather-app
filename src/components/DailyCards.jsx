@@ -55,7 +55,13 @@ export default function DailyCards({ locationKey }) {
         >
           <div className="h-1/2 p-1 xs:p-0">
             <IconContext.Provider
-              value={{ className: "m-auto w-full h-full text-dark-primary" }}
+              value={{
+                className: "m-auto w-auto h-full",
+                style: {
+                  fill: "var(--dark-primary)",
+                  //可以加stroke和strokeWidth，但是无论如何都会溢出边缘
+                },
+              }}
             >
               {card.dayIcon}
             </IconContext.Provider>

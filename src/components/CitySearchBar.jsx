@@ -38,7 +38,7 @@ function CitySearchBar({ setLocationKey, setLocationName }) {
 
   function onInputChange(e) {
     const value = e.target.value;
-    setSearchInput(value);
+    setSearchInput(value); //同步在搜索框中显示
     handleInputChange(value);
     setHighlightedIndex(-1);
   }
@@ -90,7 +90,11 @@ function CitySearchBar({ setLocationKey, setLocationName }) {
   }
 
   return (
-    <div ref={menuRef} id="search-bar" className="relative w-full max-w-60">
+    <div
+      ref={menuRef}
+      id="search-bar"
+      className="relative w-full max-w-60 justify-self-center"
+    >
       <input
         type="text"
         className="relative z-10 h-8 w-full rounded-full py-1 pl-10 pr-3 outline-none focus:outline-none focus:ring-2 focus:ring-dark-primary"

@@ -6,6 +6,17 @@ import { IoLocationSharp } from "react-icons/io5";
 
 export default function Header({ locationKey, setLocationKey }) {
   const apiKey = import.meta.env.VITE_API_KEY;
+
+  //控制Tooltip
+  const [isOpen, setIsOpen] = useState(false);
+  function handleMouseEnter() {
+    setTimeout(() => setIsOpen(true), 150);
+  }
+
+  function handleMouseLeave() {
+    setTimeout(() => setIsOpen(false), 100);
+  }
+  
   const [locationName, setLocationName] = useState(null);
   async function fetchLocationName() {
     const url = `https://geoapi.qweather.com/v2/city/lookup?key=${apiKey}&lang=zh&location=${locationKey}`;
@@ -40,15 +51,21 @@ export default function Header({ locationKey, setLocationKey }) {
   if (error) return <span>Error: {error.message}</span>;
 
   return (
-    <nav className="mx-auto grid grid-cols-[1.5fr,2fr,1fr] items-center gap-2 px-2 sm:px-6">
-      <div className="flex items-center gap-1">
-        <div>
+    <nav className="relative mx-auto grid grid-cols-[1.5fr,2fr,1fr] items-center gap-2 px-2 sm:px-6">
+      <div className="flex items-center gap-1 overflow-hidden">
+        <span>
           <IoLocationSharp className="p-[2px] text-2xl" />
-        </div>
+        </span>
         {locationName && (
-          <span>
-            {locationName.name}，{locationName.country}
-          </span>
+          <>
+            <span
+              className="cursor-pointer truncate"
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            >
+              {locationName.name}，{locationName.country}
+            </span>
+          </>
         )}
       </div>
 
@@ -58,6 +75,13 @@ export default function Header({ locationKey, setLocationKey }) {
       />
 
       <Theme />
+
+      {/* tooltip */}
+      {locationName && isOpen && (
+        <div className="absolute top-[120%] z-10 ml-6 rounded-md bg-white px-2 py-1 text-xs">
+          {locationName.name}，{locationName.country}
+        </div>
+      )}
     </nav>
   );
 }
