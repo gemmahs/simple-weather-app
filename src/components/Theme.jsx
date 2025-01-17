@@ -2,6 +2,11 @@ import { IoIosArrowBack } from "react-icons/io";
 import { useState, useEffect, useRef, useContext } from "react";
 import { ThemeContext } from "../App.jsx";
 
+const THEMES = [
+  { theme: "cool", desc: "冷", color: "#c5dff3" },
+  { theme: "warm", desc: "暖", color: "#f1d69c" },
+  { theme: "mint", desc: "薄荷", color: "#dbfaf4" },
+];
 export default function Theme() {
   const { theme, setTheme } = useContext(ThemeContext);
   const [menuHidden, setMenuHidden] = useState(true);
@@ -40,29 +45,18 @@ export default function Theme() {
         />
         {!menuHidden && (
           <div className="absolute right-1 top-[29px] flex w-[80px] flex-col justify-center gap-y-1 rounded-sm bg-background px-1 py-2 text-sm shadow-md">
-            <div
-              className={`flex items-center gap-2 px-2 py-1 hover:rounded-sm hover:bg-accent ${theme === "cool" ? "bg-accent" : ""}`}
-              onClick={() => setTheme("cool")}
-            >
-              <span className="h-3 w-3 rounded-full bg-[#c5dff3]"></span>
-              <span>冷</span>
-            </div>
-
-            <div
-              className={`flex items-center gap-2 px-2 py-1 hover:rounded-sm hover:bg-accent ${theme === "warm" ? "bg-accent" : ""}`}
-              onClick={() => setTheme("warm")}
-            >
-              <span className="h-3 w-3 rounded-full bg-[#f1d69c]"></span>
-              <span>暖</span>
-            </div>
-
-            <div
-              className={`flex items-center gap-2 px-2 py-1 hover:rounded-sm hover:bg-accent ${theme === "mint" ? "bg-accent" : ""}`}
-              onClick={() => setTheme("mint")}
-            >
-              <span className="h-3 w-3 rounded-full bg-[#dbfaf4]"></span>
-              <span>薄荷</span>
-            </div>
+            {THEMES.map((item) => (
+              <div
+                key={item.theme}
+                className={`flex items-center gap-2 rounded-sm px-2 py-1 hover:bg-accent ${theme === item.theme ? "font-semibold" : ""}`}
+                onClick={() => setTheme(item.theme)}
+              >
+                <span
+                  className={`h-3 w-3 rounded-full bg-[${item.color}]`}
+                ></span>
+                <span>{item.desc}</span>
+              </div>
+            ))}
           </div>
         )}
       </div>
